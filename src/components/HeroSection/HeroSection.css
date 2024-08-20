@@ -1,0 +1,20 @@
+.heroSection_layout{
+    border: 0.1rem solid #000;
+    height: 30rem;
+    width: 80%;
+    margin: auto;
+    margin-top: 2%;
+}
+
+.introduction_container{
+    border: 0.1rem solid #000;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.introduction_heading{
+    border: 0.1rem solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}

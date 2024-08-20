@@ -4,7 +4,16 @@ import "./HeroSection.css";
 const HeroSection = () => {
   return (
     <>
-    Hero Section
+      <div className="heroSection_layout">
+        <div className="introduction_container">
+          <div className="introduction_heading">
+            Welcome
+          </div>
+          <div className="introduction_image">
+            img
+          </div>
+        </div>
+      </div>
     </>
   )
 }
