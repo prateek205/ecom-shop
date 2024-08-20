@@ -39,7 +39,7 @@
 
 
 .product_section{
-    border: 0.1rem solid #000;
+    /* border: 0.1rem solid #000; */
     margin-top: 10%;
     display: flex;
     justify-content: center;
@@ -67,7 +67,7 @@
 }
 
 .product_list{
-    border: 0.1rem solid #000;
+    /* border: 0.1rem solid #000; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }

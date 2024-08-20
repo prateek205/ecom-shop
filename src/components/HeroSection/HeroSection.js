@@ -9,6 +9,7 @@ const HeroSection = () => {
       <div className="heroSection_layout">
           <HeroContainer/>
           <FeatureSection/>
+          
       </div>
     </>
   )
