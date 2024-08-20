@@ -10,11 +10,5 @@
     border: 0.1rem solid #000;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-}
-.introduction_heading{
-    border: 0.1rem solid #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+    height: 100%;
 }
