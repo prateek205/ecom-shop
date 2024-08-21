@@ -25,7 +25,7 @@ const ServiceSection = () => {
 
         <div className="service_payment">
           <div className="service_pay">
-            <i class="fa-solid fa-credit-card"></i>
+            <i className="fa-solid fa-credit-card"></i>
             <p>Secured Payment Service</p>
           </div>
         </div>

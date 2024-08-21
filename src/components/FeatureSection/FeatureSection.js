@@ -1,7 +1,16 @@
-import React from "react";
+import { useProductContext } from "../../context/productContext";
+import Productlayout from "../ProductLayout/Productlayout";
 import "./FeatureSection.css";
 
 const FeatureSection = () => {
+  const { isLoading, featureProduct } = useProductContext();
+
+  console.log(featureProduct);
+
+  if (isLoading) {
+    return <div>.... loading</div>;
+  }
+
   return (
     <>
       <div className="product_section">
@@ -11,21 +20,13 @@ const FeatureSection = () => {
             <h1>Smartphone</h1>
           </div>
         </div>
-        <div className="product_list">
-          <div className="product_card">
-            <div className="product_image">
-              <img
-                src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/8/9/n/-original-imagtc6fyrstd4jm.jpeg?q=70"
-                alt=""
-              />
-            </div>
-            <div className="product_brand">
-              <div className="product_brand_name">
-                <h4>Apple</h4>
-              </div>
-            </div>
-          </div>
-        </div>
+        {featureProduct.map((curElem) => {
+          return (
+            <>
+              <Productlayout key={curElem.id} {...curElem} />
+            </>
+          );
+        })}
       </div>
     </>
   );

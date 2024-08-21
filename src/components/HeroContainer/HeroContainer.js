@@ -1,14 +1,20 @@
 import React from "react";
 import "./HeroContainer.css";
+import { NavLink } from "react-router-dom";
 
-const HeroContainer = () => {
+const HeroContainer = ({ Data }) => {
+  const { title } = Data;
+
   return (
     <>
       <div className="introduction_container">
         <div className="introcontainer">
           <p>Welcome to</p>
-          <h1>e-commerce</h1>
+          <h1>{title}</h1>
           <p>Mobile Shopping Store</p>
+          <NavLink to={"/product"}>
+            <button>Shop Now</button>
+          </NavLink>
         </div>
         <div className="introimage">
           <img
