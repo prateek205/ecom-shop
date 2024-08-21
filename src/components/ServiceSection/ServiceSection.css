@@ -1,0 +1,89 @@
+.service_container{
+    /* border: 0.1rem solid #000; */
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 20rem;
+    background-color: #fff;
+}
+
+.service_shipping, .service_payment{
+    /* border: 0.1rem solid #000; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service_details, .service_pay{
+    /* border: 0.1rem solid #000; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    height: 15.5rem;
+    border-radius: 0.5rem;
+    background-color: #eaeaea;
+    box-shadow: 0rem 0rem 0.5rem 0rem #453F78;
+}
+.service_details i, .service_pay i{
+    font-size: 2.5rem;
+    color: #453F78;
+}
+.service_details p, .service_pay p{
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+.service_contact{
+    /* border: 0.1rem solid #000; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.25rem;
+    
+}
+.service_non-contact-details {
+    /* border: 0.1rem solid #000; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 3.75rem;
+    /* height: 7.5rem; */
+    border-radius: 0.5rem;
+    background-color: #eaeaea;
+    box-shadow: 0rem 0rem 0.5rem 0rem #453F78;
+}
+.service_non-contact-details i{
+    font-size: 1.5rem;
+    color: #453F78;
+}
+.service_non-contact-details p{
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+.service_assured{
+    /* border: 0.1rem solid #000; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    /* height: 7.5rem; */
+    border-radius: 0.5rem;
+    background-color: #eaeaea;
+    box-shadow: 0rem 0rem 0.5rem 0rem #453F78;
+}
+.service_assured i{
+    font-size: 1.5rem;
+    color: #453F78;
+}
+.service_assured p{
+    margin-bottom: 0;
+    font-size: 1rem;
+}
