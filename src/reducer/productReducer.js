@@ -26,7 +26,7 @@ const productReducer = (state, action) => {
       return {
         ...state,
         isLoading: false,
-        ieError: true,
+        isError: true,
       };
 
     default:
