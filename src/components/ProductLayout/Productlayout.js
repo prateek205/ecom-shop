@@ -3,7 +3,7 @@ import "./ProductLayout.css";
 import {NavLink} from "react-router-dom"
 
 const Productlayout = (curElem) => {
-  const { id, imgSrc, title } = curElem;
+  const { id, imgSrc, title } = curElem
   return (
     <>
       <NavLink to={`/products/${id}`}>

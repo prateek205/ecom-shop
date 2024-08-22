@@ -1,5 +1,4 @@
 const productReducer = (state, action) => {
-
   switch (action.type) {
     case "SET_LOADING":
       return {
@@ -8,14 +7,14 @@ const productReducer = (state, action) => {
       };
 
     case "SET_API_DATA":
-        const filterData = action.payload.filter((curElem)=>{
-            return curElem.features===true
-        })
+      const filterData = action.payload.filter((curElem) => {
+        return curElem.features === true;
+      });
       return {
         ...state,
         isLoading: false,
         allProducts: action.payload,
-        featureProduct:filterData,
+        featureProduct: filterData,
       };
 
     case "SET_ERROR":

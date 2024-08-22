@@ -24,7 +24,7 @@ const FeatureSection = () => {
           {featureProduct.map((curElem) => {
             return (
               <div>
-                <Productlayout key={curElem.id} {...curElem} />;
+                <Productlayout key={curElem.id} {...curElem} />
               </div>
             );
           })}
