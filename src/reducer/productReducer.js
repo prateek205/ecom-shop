@@ -8,6 +8,8 @@ const productReducer = (state, action) => {
 
     case "SET_API_DATA":
       const filterData = action.payload.filter((curElem) => {
+        // console.log(curElem.features);
+        
         return curElem.features === true;
       });
       return {

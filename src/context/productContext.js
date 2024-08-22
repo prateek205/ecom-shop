@@ -4,7 +4,7 @@ import reducer from "../reducer/productReducer";
 
 const AppContext = createContext();
 
-const API = "https://prateek205.github.io/allProducts.json"
+const API = "https://raw.githubusercontent.com/prateek205/apiData/main/api/allProducts.json"
 
 const initialState = {
     isLoading: false,

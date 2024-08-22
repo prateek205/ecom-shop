@@ -5,8 +5,6 @@ import "./FeatureSection.css";
 const FeatureSection = () => {
   const { isLoading, featureProduct } = useProductContext();
 
-  console.log(featureProduct);
-
   if (isLoading) {
     return <div>.... loading</div>;
   }
@@ -22,11 +20,7 @@ const FeatureSection = () => {
         </div>
         <div className="product_list">
           {featureProduct.map((curElem) => {
-            return (
-              <div>
-                <Productlayout key={curElem.id} {...curElem} />
-              </div>
-            );
+            return <Productlayout key={curElem.id} {...curElem} />;
           })}
         </div>
       </div>
