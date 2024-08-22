@@ -20,13 +20,15 @@ const FeatureSection = () => {
             <h1>Smartphone</h1>
           </div>
         </div>
-        {featureProduct.map((curElem) => {
-          return (
-            <>
-              <Productlayout key={curElem.id} {...curElem} />
-            </>
-          );
-        })}
+        <div className="product_list">
+          {featureProduct.map((curElem) => {
+            return (
+              <div>
+                <Productlayout key={curElem.id} {...curElem} />;
+              </div>
+            );
+          })}
+        </div>
       </div>
     </>
   );

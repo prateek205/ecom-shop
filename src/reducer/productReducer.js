@@ -1,5 +1,3 @@
-// import _ from "lodash"
-
 const productReducer = (state, action) => {
 
   switch (action.type) {
@@ -8,19 +6,17 @@ const productReducer = (state, action) => {
         ...state,
         isLoading: true,
       };
-    
-    case "SET_API_DATA":
-        const featureData = action.payload.filter((curElem)=> curElem.features === 'true')  
-        
-        console.log(action.payload);
-        
-        return{
-            ...state,
-            isLoading: false,
-            allProducts: action.payload,
-            featureProduct: featureData,
-        }
 
+    case "SET_API_DATA":
+        const filterData = action.payload.filter((curElem)=>{
+            return curElem.features===true
+        })
+      return {
+        ...state,
+        isLoading: false,
+        allProducts: action.payload,
+        featureProduct:filterData,
+      };
 
     case "SET_ERROR":
       return {
