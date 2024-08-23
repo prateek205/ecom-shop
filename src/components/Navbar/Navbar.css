@@ -5,6 +5,9 @@
     background-color: #453F78;
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
 .navbar-logo{
