@@ -1,12 +1,12 @@
 import React from "react";
-import "./ProductLayout.css";
+import "./FeatureLayout.css";
 import {NavLink} from "react-router-dom"
 
-const Productlayout = (curElem) => {
+const Featurelayout = (curElem) => {
   const { id, imgSrc, title } = curElem
   return (
     <>
-      <NavLink to={`/products/${id}`}>
+      <NavLink to={`/singleproduct/${id}`}>
         <div className="product_list">
           <div className="product_card">
             <div className="product_image">
@@ -24,4 +24,4 @@ const Productlayout = (curElem) => {
   );
 };
 
-export default Productlayout;
+export default Featurelayout;
