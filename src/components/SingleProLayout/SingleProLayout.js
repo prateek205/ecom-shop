@@ -33,6 +33,11 @@ const SingleProLayout = () => {
             </div>
 
             <div className="singleproimgbtn">
+              <div className="wishlist">
+                <button>
+                  <i className="fas fa-heart"></i>
+                </button>
+              </div>
               <div className="singleproimages">
                 <img
                   src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/8/9/n/-original-imagtc6fyrstd4jm.jpeg?q=70"
@@ -164,6 +169,9 @@ const SingleProLayout = () => {
               <div className="singleprodheading">
                 <p>Product Descriptions</p>
               </div>
+
+              <hr />
+
               <div className="singleproductdetails">
                 <div className="singleproductsdetailings">
                   <div className="singleproddetails">
@@ -179,7 +187,10 @@ const SingleProLayout = () => {
                   </div>
                 </div>
                 <div className="singleproductimages">
-                  <img src="https://rukminim2.flixcart.com/image/200/200/cms-rpd-img/2a68bc53a5b740068a62b8140a19770e_18a8cada497_1.jpeg?q=90" alt="" />
+                  <img
+                    src="https://rukminim2.flixcart.com/image/200/200/cms-rpd-img/2a68bc53a5b740068a62b8140a19770e_18a8cada497_1.jpeg?q=90"
+                    alt=""
+                  />
                 </div>
               </div>
 
@@ -187,7 +198,10 @@ const SingleProLayout = () => {
 
               <div className="singleproductdetails">
                 <div className="singleproductimages">
-                  <img src="https://rukminim2.flixcart.com/image/200/200/cms-rpd-img/af0f9e1e23c042ce9d8f27b02bb996d3_18a8cacbaad_HighlyDurable.jpeg?q=90" alt="" />
+                  <img
+                    src="https://rukminim2.flixcart.com/image/200/200/cms-rpd-img/af0f9e1e23c042ce9d8f27b02bb996d3_18a8cacbaad_HighlyDurable.jpeg?q=90"
+                    alt=""
+                  />
                 </div>
                 <div className="singleproductsdetailings">
                   <div className="singleproddetails">
@@ -195,12 +209,19 @@ const SingleProLayout = () => {
                   </div>
                   <div className="singleproddescriptions">
                     <p>
-                    The innovative new design features back glass that has color infused throughout the material. A custom dual ion-exchange process for the glass, and an aerospace-gradealuminum enclosure, help make the iPhone 15 Plus incredibly durable. Dependably durable. The Ceramic Shield front is tougher than any smartphone glass. Moreover, the iPhone is splash, water, and dust resistant. What a relief.
+                      The innovative new design features back glass that has
+                      color infused throughout the material. A custom dual
+                      ion-exchange process for the glass, and an
+                      aerospace-gradealuminum enclosure, help make the iPhone 15
+                      Plus incredibly durable. Dependably durable. The Ceramic
+                      Shield front is tougher than any smartphone glass.
+                      Moreover, the iPhone is splash, water, and dust resistant.
+                      What a relief.
                     </p>
                   </div>
                 </div>
               </div>
-              
+
               <hr />
 
               <div className="singleproductdetails">
@@ -210,12 +231,17 @@ const SingleProLayout = () => {
                   </div>
                   <div className="singleproddescriptions">
                     <p>
-                    Now the Main camera shoots in super-high resolution. So it’s easier than ever to take standout photos with amazing detail — from snapshots to stunning landscapes.
+                      Now the Main camera shoots in super-high resolution. So
+                      it’s easier than ever to take standout photos with amazing
+                      detail — from snapshots to stunning landscapes.
                     </p>
                   </div>
                 </div>
                 <div className="singleproductimages">
-                  <img src="https://rukminim2.flixcart.com/image/200/200/cms-rpd-img/884d4a0dcc7142fa999639ee0083bdfa_18a8cacd60b_Camera.jpeg?q=90" alt="" />
+                  <img
+                    src="https://rukminim2.flixcart.com/image/200/200/cms-rpd-img/884d4a0dcc7142fa999639ee0083bdfa_18a8cacd60b_Camera.jpeg?q=90"
+                    alt=""
+                  />
                 </div>
               </div>
 
@@ -223,7 +249,10 @@ const SingleProLayout = () => {
 
               <div className="singleproductdetails">
                 <div className="singleproductimages">
-                  <img src="https://rukminim2.flixcart.com/image/200/200/cms-rpd-img/0d6d81be7460430c8afb23a71743c5bb_18a8cad00ae_Chip.jpeg?q=90" alt="" />
+                  <img
+                    src="https://rukminim2.flixcart.com/image/200/200/cms-rpd-img/0d6d81be7460430c8afb23a71743c5bb_18a8cad00ae_Chip.jpeg?q=90"
+                    alt=""
+                  />
                 </div>
                 <div className="singleproductsdetailings">
                   <div className="singleproddetails">
@@ -231,12 +260,17 @@ const SingleProLayout = () => {
                   </div>
                   <div className="singleproddescriptions">
                     <p>
-                    A16 Bionic powers all kinds of advanced features. Like computational photography used for 24 MP photos and next-gen portraits. Voice Isolation for phone calls. And smooth performance for graphics-intensive games. All with incredible efficiency for great battery life. No wonder it started as a Pro chip.
+                      A16 Bionic powers all kinds of advanced features. Like
+                      computational photography used for 24 MP photos and
+                      next-gen portraits. Voice Isolation for phone calls. And
+                      smooth performance for graphics-intensive games. All with
+                      incredible efficiency for great battery life. No wonder it
+                      started as a Pro chip.
                     </p>
                   </div>
                 </div>
               </div>
-              
+
               <hr />
 
               <div className="singleproductdetails">
@@ -246,12 +280,18 @@ const SingleProLayout = () => {
                   </div>
                   <div className="singleproddescriptions">
                     <p>
-                    The new USB-C connector lets you charge your Mac or iPad with the same cable you use to charge your iPhone 15 Plus. You can even use the iPhone 15 Plus to charge the Apple Watch or AirPods. Bye-bye, cable clutter.
+                      The new USB-C connector lets you charge your Mac or iPad
+                      with the same cable you use to charge your iPhone 15 Plus.
+                      You can even use the iPhone 15 Plus to charge the Apple
+                      Watch or AirPods. Bye-bye, cable clutter.
                     </p>
                   </div>
                 </div>
                 <div className="singleproductimages">
-                  <img src="https://rukminim2.flixcart.com/image/200/200/cms-rpd-img/1daf65ddb5a54589a1c3e3e27220e51c_18a8cad20b5_USB.jpeg?q=90" alt="" />
+                  <img
+                    src="https://rukminim2.flixcart.com/image/200/200/cms-rpd-img/1daf65ddb5a54589a1c3e3e27220e51c_18a8cad20b5_USB.jpeg?q=90"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
