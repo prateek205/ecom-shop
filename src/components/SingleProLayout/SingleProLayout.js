@@ -1,7 +1,8 @@
-import { useEffect } from "react";
+import { useEffect} from "react";
 import "./SingleProLayout.css";
 import { useParams } from "react-router-dom";
 import { useProductContext } from "../../context/productContext";
+import PageNavigation from "../PageNavigation/PageNavigation";
 
 const API = "https://api-data-e3yn.onrender.com/products";
 
@@ -64,8 +65,9 @@ const SingleProLayout = () => {
   }, [id]);
 
   if (isSingleLoading) {
-    return <div>... Loading</div>;
+    return <div className="loading">Loading please wait...</div>;
   }
+
 
   return (
     <>
@@ -103,6 +105,9 @@ const SingleProLayout = () => {
           </div>
 
           <div className="singleprodetail">
+            <div className="pgnavigation">
+              <PageNavigation title={title} />
+            </div>
             <div className="singleproheading">
               <h3>{title}</h3>
             </div>
@@ -135,13 +140,12 @@ const SingleProLayout = () => {
               <div className="singlecolorheading">
                 <p>{colors}</p>
               </div>
-              <div className="singlecolorlist">
-                <img src={color1} alt="" />
-                <img src={color2} alt="" />
-                <img src={color3} alt="" />
-              </div>
+                <div className="singlecolorlist">
+                  <img src={color1} alt="" />
+                  <img src={color2} alt="" />
+                  <img src={color3} alt="" />
+                </div>
             </div>
-
             <div className="singlestoragedetails">
               <div className="singlestorageheading">
                 <p>{storage}</p>

@@ -109,6 +109,10 @@ hr{
     margin-left: -8%;
     background-color: #fff;
 }
+.pgnavigation{
+    margin: 0.1rem;
+    padding: 0.2rem 0.5rem;
+}
 .singleproheading{
     /* border: 0.1rem solid #000; */
     margin: 0.1rem;
