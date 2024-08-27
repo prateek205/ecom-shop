@@ -9,13 +9,13 @@ const productReducer = (state, action) => {
     case "SET_API_DATA":
       const filterData = action.payload.filter((curElem) => {
         // console.log(curElem.features);
-        
+
         return curElem.features === true;
       });
       return {
         ...state,
         isLoading: false,
-        allProducts: action.payload,
+        products: action.payload,
         featureProduct: filterData,
       };
 
@@ -26,6 +26,25 @@ const productReducer = (state, action) => {
         isError: true,
       };
 
+    case "SET_SINGLE_LOADING":
+      return {
+        ...state,
+        isSingleLoading: true,
+      };
+
+    case "SET_SINGLE_DATA":
+      return {
+        ...state,
+        isSingleLoading: false,
+        singleProducts: action.payload,
+      };
+
+    case "SINGLE_API_ERROR":
+      return {
+        ...state,
+        isSingleLoading: false,
+        SingleApiError: true,
+      };
     default:
       return state;
   }

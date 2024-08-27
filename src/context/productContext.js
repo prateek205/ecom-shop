@@ -1,47 +1,65 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
-import axios from "axios"
+import axios from "axios";
 import reducer from "../reducer/productReducer";
 
 const AppContext = createContext();
 
-const API = "https://raw.githubusercontent.com/prateek205/apiData/main/api/allProducts.json"
+const API ="https://api-data-e3yn.onrender.com/products"
 
 const initialState = {
-    isLoading: false,
-    isError: false,
-    allProducts: [],
-    featureProduct: [],
-}
-
-
-const AppProvider = ({ children }) => {
-
-    const [state, dispatch] = useReducer(reducer, initialState);
-
-    const getProduct = async(url) => {
-        dispatch({type:"SET_LOADING"})
-        try {
-            const res = await axios.get(url);
-            const allProducts = await res.data;
-            console.log(allProducts);
-
-            dispatch({type:"SET_API_DATA", payload: allProducts.allProducts})
-        } catch (error) {
-            dispatch({type:"API_ERROR"})
-        }
-    }
-
-    useEffect(()=>{
-        getProduct(API)
-    },[])
-
-
-
-  return <AppContext.Provider value={{...state}}>{children}</AppContext.Provider>;
+  isLoading: false,
+  isError: false,
+  products: [],
+  featureProduct: [],
+  isSingleLoading: false,
+  singleProducts: {},
 };
 
-const useProductContext = () =>{
-    return useContext(AppContext)
-}
+const AppProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  const getProduct = async (url) => {
+    dispatch({ type: "SET_LOADING" });
+    try {
+      const res = await axios.get(url);
+      const products = await res.data;
+      // console.log(Products);
+
+      dispatch({ type: "SET_API_DATA", payload: products });
+    } catch (error) {
+      dispatch({ type: "API_ERROR" });
+    }
+  };
+
+  // Single Products
+  const getSingleProduct = async (url) => {
+    dispatch({ type: "SET_SINGLE_LOADING" });
+    try {
+      const res = await axios.get(url);
+      const singleProducts = await res.data;
+
+      dispatch({
+        type: "SET_SINGLE_DATA",
+        payload: singleProducts,
+      });
+    } catch (error) {
+      dispatch({ type: "SINGLE_API_ERROR" });
+    }
+  };
+
+  useEffect(() => {
+    getProduct(API);
+  }, []);
+
+  return (
+    <AppContext.Provider value={{ ...state, getSingleProduct }}>
+      {children}
+    </AppContext.Provider>
+  );
+};
+
+const useProductContext = () => {
+  return useContext(AppContext);
+};
 
 export { AppProvider, AppContext, useProductContext };

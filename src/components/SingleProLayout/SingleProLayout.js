@@ -1,7 +1,72 @@
-import React from "react";
+import { useEffect } from "react";
 import "./SingleProLayout.css";
+import { useParams } from "react-router-dom";
+import { useProductContext } from "../../context/productContext";
+
+const API = "https://api-data-e3yn.onrender.com/products";
 
 const SingleProLayout = () => {
+  const { getSingleProduct, isSingleLoading, singleProducts } =
+    useProductContext();
+
+  const { id } = useParams();
+
+  const {
+    smallImg1,
+    smallImg2,
+    smallImg3,
+    smallImg4,
+    smallImg5,
+    imgSrc,
+    title,
+    extraOff,
+    price,
+    actualPrice,
+    discount,
+    warrentyImg,
+    warrentyDetail,
+    colors,
+    color1,
+    color2,
+    color3,
+    storage,
+    str1,
+    str2,
+    str3,
+    highlights,
+    highlts1,
+    highlts2,
+    highlts3,
+    highlts4,
+    DescHeading,
+    shortDesc,
+    productDescription,
+    heading1,
+    info1,
+    heading1Img,
+    heading2Img,
+    heading2,
+    info2,
+    heading3,
+    info3,
+    heading3Img,
+    heading4Img,
+    heading4,
+    info4,
+    heading5,
+    info5,
+    heading5Img,
+  } = singleProducts;
+
+  useEffect(() => {
+    getSingleProduct(`${API}/${id}`);
+    // eslint-disable-next-line
+  }, [id]);
+
+  if (isSingleLoading) {
+    return <div>... Loading</div>;
+  }
+
   return (
     <>
       <div className="singleprocontainer">
@@ -9,26 +74,11 @@ const SingleProLayout = () => {
           <div className="singleproimage">
             <div className="singleprosideimg">
               <div className="singleimglist">
-                <img
-                  src="https://m.media-amazon.com/images/I/71zFRCcMS2L._SX679_.jpg"
-                  alt=""
-                />
-                <img
-                  src="https://m.media-amazon.com/images/I/51I0ka2Cj8L._SX679_.jpg"
-                  alt=""
-                />
-                <img
-                  src="https://m.media-amazon.com/images/I/712CBkmhLhL._SX679_.jpg"
-                  alt=""
-                />
-                <img
-                  src="https://m.media-amazon.com/images/I/81BnjSLm2oL._SX679_.jpg"
-                  alt=""
-                />
-                <img
-                  src="https://m.media-amazon.com/images/I/611FiI6xN2L._SX679_.jpg"
-                  alt=""
-                />
+                <img src={smallImg1} alt="" />
+                <img src={smallImg2} alt="" />
+                <img src={smallImg3} alt="" />
+                <img src={smallImg4} alt="" />
+                <img src={smallImg5} alt="" />
               </div>
             </div>
 
@@ -39,10 +89,7 @@ const SingleProLayout = () => {
                 </button>
               </div>
               <div className="singleproimages">
-                <img
-                  src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/8/9/n/-original-imagtc6fyrstd4jm.jpeg?q=70"
-                  alt=""
-                />
+                <img src={imgSrc} alt="" />
               </div>
               <div className="singlebtnlist">
                 <div className="addbtn">
@@ -57,87 +104,72 @@ const SingleProLayout = () => {
 
           <div className="singleprodetail">
             <div className="singleproheading">
-              <h3>Apple iPhone 15 Plus (Black, 512 GB)</h3>
+              <h3>{title}</h3>
             </div>
 
             <div className="singlepriceextra">
-              <p>Extra ₹14901 off</p>
+              <p>{extraOff}</p>
             </div>
             <div className="singlepricedetails">
               <div className="singlemainprice">
-                <p>₹1,04,999</p>
+                <p>₹{price}</p>
               </div>
               <div className="singleactualprice">
-                <p>₹1,19,900</p>
+                <p>₹{actualPrice}</p>
               </div>
               <div className="singlediscount">
-                <p>12% off</p>
+                <p>{discount}</p>
               </div>
             </div>
 
             <div className="singlewarrentydetails">
               <div className="singlewarrentyimg">
-                <img
-                  src="https://rukminim2.flixcart.com/image/160/160/prod-fk-cms-brand-images/9d5696196cfb3f4440ca99b1018c8ff91a53716d1948ba73ee3bb68f36571d7a.jpg?q=90"
-                  alt=""
-                />
+                <img src={warrentyImg} alt="" />
               </div>
               <div className="singlewarrentyheading">
-                <p>
-                  1 Year Manufacturer Warranty for Device and 6 Months
-                  Manufacturer Warranty for In-Box Accessories
-                </p>
+                <p>{warrentyDetail}</p>
               </div>
             </div>
 
             <div className="singlecolorsdetails">
               <div className="singlecolorheading">
-                <p>Colors</p>
+                <p>{colors}</p>
               </div>
               <div className="singlecolorlist">
-                <img
-                  src="https://m.media-amazon.com/images/I/71zFRCcMS2L._SX679_.jpg"
-                  alt=""
-                />
-                <img
-                  src="https://m.media-amazon.com/images/I/71PjpS59XLL._SX679_.jpg"
-                  alt=""
-                />
-                <img
-                  src="https://m.media-amazon.com/images/I/71ZP6U9sWTL._SX679_.jpg"
-                  alt=""
-                />
+                <img src={color1} alt="" />
+                <img src={color2} alt="" />
+                <img src={color3} alt="" />
               </div>
             </div>
 
             <div className="singlestoragedetails">
               <div className="singlestorageheading">
-                <p>Storage</p>
+                <p>{storage}</p>
               </div>
               <div className="singlestoragelist">
-                <p>128 GB</p>
-                <p>256 GB</p>
-                <p>512 GB</p>
+                <p>{str1}</p>
+                <p>{str2}</p>
+                <p>{str3}</p>
               </div>
             </div>
 
             <div className="singlehighlightdetails">
               <div className="singlehighlightsheading">
-                <p>Highlights</p>
+                <p>{highlights}</p>
               </div>
               <div className="singlehighlightslist">
                 <ul>
                   <li>
-                    <p>512 GB ROM</p>
+                    <p>{highlts1}</p>
                   </li>
                   <li>
-                    <p>17.02 cm (6.7 inch) Super Retina XDR Display</p>
+                    <p>{highlts2}</p>
                   </li>
                   <li>
-                    <p>48MP + 12MP | 12MP Front Camera</p>
+                    <p>{highlts3}</p>
                   </li>
                   <li>
-                    <p>A16 Bionic Chip, 6 Core Processor Processor</p>
+                    <p>{highlts4}</p>
                   </li>
                 </ul>
               </div>
@@ -145,29 +177,16 @@ const SingleProLayout = () => {
 
             <div className="singledescrpdetails">
               <div className="singledecrheading">
-                <p>Description</p>
+                <p>{DescHeading}</p>
               </div>
               <div className="singledescdetailing">
-                <p>
-                  Experience the iPhone 15 Plus – your dynamic companion.
-                  Dynamic Island ensures you stay connected, bubbling up alerts
-                  seamlessly while you're busy. Its durable design features
-                  infused glass and aerospace-grade aluminum, making it
-                  dependable and resistant to water and dust. Capture life with
-                  precision using the 48 MP Main Camera, perfect for any shot.
-                  Powered by the A16 Bionic Processor, it excels in
-                  computational photography and more, all while conserving
-                  battery life. Plus, it's USB-C compatible, simplifying your
-                  charging needs. Elevate your tech game with the iPhone 15 Plus
-                  – innovation at your fingertips. Goodbye cable clutter, hello
-                  convenience.
-                </p>
+                <p>{shortDesc}</p>
               </div>
             </div>
 
             <div className="singleprodesc">
               <div className="singleprodheading">
-                <p>Product Descriptions</p>
+                <p>{productDescription}</p>
               </div>
 
               <hr />
@@ -175,22 +194,14 @@ const SingleProLayout = () => {
               <div className="singleproductdetails">
                 <div className="singleproductsdetailings">
                   <div className="singleproddetails">
-                    <p>Dynamic Island</p>
+                    <p>{heading1}</p>
                   </div>
                   <div className="singleproddescriptions">
-                    <p>
-                      Dynamic Island bubbles up alerts and Live Activities — so
-                      you don’t miss them while you’re doing something else. You
-                      can track your next ride, see who’s calling, check your
-                      flight status, and so much more.
-                    </p>
+                    <p>{info1}</p>
                   </div>
                 </div>
                 <div className="singleproductimages">
-                  <img
-                    src="https://rukminim2.flixcart.com/image/200/200/cms-rpd-img/2a68bc53a5b740068a62b8140a19770e_18a8cada497_1.jpeg?q=90"
-                    alt=""
-                  />
+                  <img src={heading1Img} alt="" />
                 </div>
               </div>
 
@@ -198,26 +209,14 @@ const SingleProLayout = () => {
 
               <div className="singleproductdetails">
                 <div className="singleproductimages">
-                  <img
-                    src="https://rukminim2.flixcart.com/image/200/200/cms-rpd-img/af0f9e1e23c042ce9d8f27b02bb996d3_18a8cacbaad_HighlyDurable.jpeg?q=90"
-                    alt=""
-                  />
+                  <img src={heading2Img} alt="" />
                 </div>
                 <div className="singleproductsdetailings">
                   <div className="singleproddetails">
-                    <p>Highly Durable</p>
+                    <p>{heading2}</p>
                   </div>
                   <div className="singleproddescriptions">
-                    <p>
-                      The innovative new design features back glass that has
-                      color infused throughout the material. A custom dual
-                      ion-exchange process for the glass, and an
-                      aerospace-gradealuminum enclosure, help make the iPhone 15
-                      Plus incredibly durable. Dependably durable. The Ceramic
-                      Shield front is tougher than any smartphone glass.
-                      Moreover, the iPhone is splash, water, and dust resistant.
-                      What a relief.
-                    </p>
+                    <p>{info2}</p>
                   </div>
                 </div>
               </div>
@@ -227,21 +226,14 @@ const SingleProLayout = () => {
               <div className="singleproductdetails">
                 <div className="singleproductsdetailings">
                   <div className="singleproddetails">
-                    <p>48 MP Main Camera</p>
+                    <p>{heading3}</p>
                   </div>
                   <div className="singleproddescriptions">
-                    <p>
-                      Now the Main camera shoots in super-high resolution. So
-                      it’s easier than ever to take standout photos with amazing
-                      detail — from snapshots to stunning landscapes.
-                    </p>
+                    <p>{info3}</p>
                   </div>
                 </div>
                 <div className="singleproductimages">
-                  <img
-                    src="https://rukminim2.flixcart.com/image/200/200/cms-rpd-img/884d4a0dcc7142fa999639ee0083bdfa_18a8cacd60b_Camera.jpeg?q=90"
-                    alt=""
-                  />
+                  <img src={heading3Img} alt="" />
                 </div>
               </div>
 
@@ -249,24 +241,14 @@ const SingleProLayout = () => {
 
               <div className="singleproductdetails">
                 <div className="singleproductimages">
-                  <img
-                    src="https://rukminim2.flixcart.com/image/200/200/cms-rpd-img/0d6d81be7460430c8afb23a71743c5bb_18a8cad00ae_Chip.jpeg?q=90"
-                    alt=""
-                  />
+                  <img src={heading4Img} alt="" />
                 </div>
                 <div className="singleproductsdetailings">
                   <div className="singleproddetails">
-                    <p>A16 Bionic Processor</p>
+                    <p>{heading4}</p>
                   </div>
                   <div className="singleproddescriptions">
-                    <p>
-                      A16 Bionic powers all kinds of advanced features. Like
-                      computational photography used for 24 MP photos and
-                      next-gen portraits. Voice Isolation for phone calls. And
-                      smooth performance for graphics-intensive games. All with
-                      incredible efficiency for great battery life. No wonder it
-                      started as a Pro chip.
-                    </p>
+                    <p>{info4}</p>
                   </div>
                 </div>
               </div>
@@ -276,20 +258,17 @@ const SingleProLayout = () => {
               <div className="singleproductdetails">
                 <div className="singleproductsdetailings">
                   <div className="singleproddetails">
-                    <p>USB-C Compatible</p>
+                    <p>{heading5}</p>
                   </div>
                   <div className="singleproddescriptions">
                     <p>
-                      The new USB-C connector lets you charge your Mac or iPad
-                      with the same cable you use to charge your iPhone 15 Plus.
-                      You can even use the iPhone 15 Plus to charge the Apple
-                      Watch or AirPods. Bye-bye, cable clutter.
+                      {info5}
                     </p>
                   </div>
                 </div>
                 <div className="singleproductimages">
                   <img
-                    src="https://rukminim2.flixcart.com/image/200/200/cms-rpd-img/1daf65ddb5a54589a1c3e3e27220e51c_18a8cad20b5_USB.jpeg?q=90"
+                    src={heading5Img}
                     alt=""
                   />
                 </div>
