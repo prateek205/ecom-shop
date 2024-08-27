@@ -1,0 +1,7 @@
+.gridviewsection{
+    /* border: 0.1rem solid #000; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 0.5rem;
+    /* margin-left: 15%; */
+}

@@ -1,14 +1,14 @@
 .productscontainer{
     border: 0.1rem solid #000;
-    width: 80%;
+    width: 90%;
     margin: auto;
     margin-top: 2%;
     display: grid;
     grid-template-columns: repeat(2,1fr);
 }
 .products-filter{
-    border: 0.1rem solid #000;
-    width: 46.8%;
+    /* border: 0.1rem solid #000; */
+    width: 50%;
     margin: 0.5rem;
     padding: 0.2rem 0.25rem;
 }
@@ -17,12 +17,12 @@
     margin-left: -50%;
 }
 .products-sort{
-    border: 0.1rem solid #000;
+    /* border: 0.1rem solid #000; */
     margin: 0.5rem;
     padding: 0.2rem 0.25rem;
+    margin-left: 25%;
 }
 .products-view{
-    border: 0.1rem solid #000;
-    margin: 0.5rem;
-    padding: 0.2rem 0.25rem;
+    /* border: 0.1rem solid #000; */
+    margin-left: 25%;
 }
