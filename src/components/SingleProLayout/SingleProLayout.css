@@ -255,7 +255,7 @@ hr{
 .singlestoragelist p{
     border: 0.15rem dotted #808080;
     margin-bottom: 0;
-    font-size: 1.2rem;
+    font-size: 0.85rem;
     padding: 0rem 0.5rem;
     cursor: pointer;
 }

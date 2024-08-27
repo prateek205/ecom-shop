@@ -261,16 +261,11 @@ const SingleProLayout = () => {
                     <p>{heading5}</p>
                   </div>
                   <div className="singleproddescriptions">
-                    <p>
-                      {info5}
-                    </p>
+                    <p>{info5}</p>
                   </div>
                 </div>
                 <div className="singleproductimages">
-                  <img
-                    src={heading5Img}
-                    alt=""
-                  />
+                  <img src={heading5Img} alt="" />
                 </div>
               </div>
             </div>
