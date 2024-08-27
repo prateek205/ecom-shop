@@ -6,22 +6,22 @@
     display: grid;
     grid-template-columns: repeat(2,1fr);
 }
-.productsfilter{
+.products-filter{
     border: 0.1rem solid #000;
     width: 46.8%;
     margin: 0.5rem;
     padding: 0.2rem 0.25rem;
 }
-.productsdetails{
+.products-sort--view{
     /* border: 0.1rem solid #000; */
     margin-left: -50%;
 }
-.productssort{
+.products-sort{
     border: 0.1rem solid #000;
     margin: 0.5rem;
     padding: 0.2rem 0.25rem;
 }
-.productslist{
+.products-view{
     border: 0.1rem solid #000;
     margin: 0.5rem;
     padding: 0.2rem 0.25rem;
