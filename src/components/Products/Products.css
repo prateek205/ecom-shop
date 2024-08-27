@@ -1,0 +1,28 @@
+.productscontainer{
+    border: 0.1rem solid #000;
+    width: 80%;
+    margin: auto;
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.productsfilter{
+    border: 0.1rem solid #000;
+    width: 46.8%;
+    margin: 0.5rem;
+    padding: 0.2rem 0.25rem;
+}
+.productsdetails{
+    /* border: 0.1rem solid #000; */
+    margin-left: -50%;
+}
+.productssort{
+    border: 0.1rem solid #000;
+    margin: 0.5rem;
+    padding: 0.2rem 0.25rem;
+}
+.productslist{
+    border: 0.1rem solid #000;
+    margin: 0.5rem;
+    padding: 0.2rem 0.25rem;
+}
