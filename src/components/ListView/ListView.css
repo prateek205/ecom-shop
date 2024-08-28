@@ -1,0 +1,67 @@
+.listview--section {
+  /* border: 0.1rem solid #000; */
+  background-color: #fff;
+  margin-top: 2%;
+}
+.listview-layout {
+  /* border: 0.1rem solid #000; */
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+.listview-image{
+    /* border: 0.1rem solid #000; */
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.listview-image img{
+    padding: 1rem;
+    width: 10rem;
+}
+
+.listview-detail{
+    /* border: 0.1rem solid #000; */
+    display: flex;
+    flex-direction: column;
+    width: 150%;
+    margin-left: -20%;
+}    
+.listview-title{
+    /* border: 0.1rem solid #000; */
+    padding: 0.5rem 0.75rem;
+}
+.listview-title p{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.listview-description{
+    /* border: 0.1rem solid #000; */
+    margin-top: 0%;
+    padding: 0.25rem;
+}
+.listview-description ul{
+    margin-left: -5.8%;
+    margin-bottom: 0.5%;
+}
+.listview-description ul li{
+    /* border: 0.1rem solid #000; */
+    font-size: 0.85rem;
+    padding: 0.2rem 0.75rem;
+}
+
+.listview-price{
+    /* border: 0.1rem solid #000; */
+    width: 70%;
+    margin-left: 30%;
+    padding: 0.5rem 0.75rem;
+}
+.listview-price p{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.listview-price p i{
+    font-size: 1rem;
+}

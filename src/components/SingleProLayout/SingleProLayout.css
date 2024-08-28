@@ -73,6 +73,9 @@ hr{
     height: 25rem;
     background-color: #fff;
 }
+.singleproimages img{
+    width: 15rem;
+}
 
 .singleproimgbtn{
     display: flex;    

@@ -15,10 +15,16 @@ const filteredReducer = (state, action) => {
             allProducts: [...action.payload],
         }
 
-    case "SET_GRIDVIEW":
+    case "SET_GRID_VIEW":
         return{
             ...state,
             isGridview:true
+        }
+
+    case "SET_LIST_VIEW":
+        return{
+            ...state,
+            isGridview:false
         }
 
     default:
