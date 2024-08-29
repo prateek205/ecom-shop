@@ -3,7 +3,7 @@ import "./GridView.css";
 import Featurelayout from "../FeatureLayout/Featurelayout";
 
 const GridView = ({ products }) => {
-  console.log(products);
+  // console.log(products);
 
   return (
     <>
