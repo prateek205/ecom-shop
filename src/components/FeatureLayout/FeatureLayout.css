@@ -5,6 +5,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  background-color: #fff;
 }
 .product_card {
   /* border: 0.1rem solid #000; */
@@ -14,6 +15,8 @@
   margin-bottom: 5%;
   background-color: #fff;
   position: relative;
+  box-shadow: 0rem 0rem 0.1rem #453F78;
+  border-radius: 0.2rem;
 }
 .product_image {
   /* border: 0.1rem solid #000; */
@@ -39,7 +42,9 @@
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 0;
-  transition: 0.6 linear;
+  transition: 0.2s linear;
+  box-shadow: 0rem 0rem 0.1rem #453F78;
+  border-radius: 0.2rem;
 }
 .product_brand:hover {
   opacity: 1;

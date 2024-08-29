@@ -1,6 +1,8 @@
 .sort-section{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    background-color: #fff;
+    height: 4.4rem;
 }
 
 .sort-grid--list-btn{
@@ -15,7 +17,7 @@
     border: 0;
     outline: 0;
     /* border: 0.1rem solid #000; */
-    padding: 0.5rem 1rem;
+    padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
     box-shadow: 0rem 0rem 0.1rem 0rem #453F78;
 }
@@ -45,6 +47,7 @@
     /* border: 0.1rem solid #000; */
     padding: 0.2rem 2.5rem;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 .sort--prices select{

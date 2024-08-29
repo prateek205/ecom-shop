@@ -1,6 +1,7 @@
 import React from "react";
 import "./ListView.css";
 import { NavLink } from "react-router-dom";
+import FormatPrice from "../../Helpers/FormatPrice";
 
 const ListView = ({ products }) => {
   return (
@@ -43,7 +44,7 @@ const ListView = ({ products }) => {
                   </div>
 
                   <div className="listview-price">
-                    <p><i className="fas fa-indian-rupee"></i> {price}</p>
+                    <p>{<FormatPrice price={price}/>} </p>
                   </div>
                 </div>
                 <hr />

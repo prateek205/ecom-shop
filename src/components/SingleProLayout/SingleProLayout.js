@@ -3,6 +3,7 @@ import "./SingleProLayout.css";
 import { useParams } from "react-router-dom";
 import { useProductContext } from "../../context/productContext";
 import PageNavigation from "../PageNavigation/PageNavigation";
+import FormatPrice from "../../Helpers/FormatPrice";
 
 const API = "https://api-data-e3yn.onrender.com/products";
 
@@ -117,7 +118,7 @@ const SingleProLayout = () => {
             </div>
             <div className="singlepricedetails">
               <div className="singlemainprice">
-                <p>₹{price}</p>
+                <p>{<FormatPrice price={price}/>}</p>
               </div>
               <div className="singleactualprice">
                 <p>₹{actualPrice}</p>
