@@ -1,12 +1,6 @@
 const filteredReducer = (state, action) => {
   switch (action.type) {
 
-    case "SET_LOADING":
-        return{
-            ...state,
-            isLoading:true
-        }
-
     case "SET_FILTER_PRODUCTS":
         return{
             ...state,
@@ -18,13 +12,13 @@ const filteredReducer = (state, action) => {
     case "SET_GRID_VIEW":
         return{
             ...state,
-            isGridview:true
+            isGridView:true
         }
 
     case "SET_LIST_VIEW":
         return{
             ...state,
-            isGridview:false
+            isGridView:false
         }
 
     default:

@@ -8,7 +8,7 @@ const initialState = {
   isLoading: false,
   filter_products: [],
   allProducts: [],
-  isGridView: false,
+  isGridView: true,
 };
 
 export const FilterContextProvider = ({ children }) => {

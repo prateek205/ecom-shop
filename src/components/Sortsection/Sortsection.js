@@ -3,8 +3,7 @@ import "./Sortsection.css";
 import { useFilterContext } from "../../context/filteredContext";
 
 const Sortsection = () => {
-  const { filter_products, isGridView, setGridView, setListView } =
-    useFilterContext();
+  const { filter_products, isGridView, setGridView, setListView } = useFilterContext();
 
   return (
     <>
@@ -17,7 +16,7 @@ const Sortsection = () => {
             <i className="fas fa-grip"></i>
           </button>
           <button
-            className={!isGridView ? "active sort-btn" : "sort-btn"}
+            className={isGridView ? "sort-btn" : "active sort-btn"}
             onClick={setListView}
           >
             <i className="fas fa-list"></i>
