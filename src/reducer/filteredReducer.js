@@ -55,7 +55,6 @@ const filteredReducer = (state, action) => {
         if (sortingValue === "Price -- High to Low") {
           return b.price - a.price;
         }
-
         if (sortingValue === "A to Z") {
           return a.title.localeCompare(b.title);
         }
@@ -63,6 +62,7 @@ const filteredReducer = (state, action) => {
         if (sortingValue === "Z to A") {
           return b.title.localeCompare(a.title);
         }
+
       };
 
       newSortData = tempSortProduct.sort(sortingProducts);

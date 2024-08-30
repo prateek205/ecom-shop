@@ -36,10 +36,11 @@ const Sortsection = () => {
             <label htmlFor="sort"></label>
             <select name="sort" id="sort" onClick={sorting}>
               <option disabled>Feature</option>
-              <option value="Price -- Low to High">Price -- Low to High</option>
-              <option value="Price -- High to Low">Price -- High to Low</option>
+              <option value="All">All</option>
               <option value="A to Z">A to Z</option>
               <option value="Z to A">Z to A</option>
+              <option value="Price -- Low to High">Price -- Low to High</option>
+              <option value="Price -- High to Low">Price -- High to Low</option>
             </select>
           </form>
         </div>
