@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { useProductContext } from "../../context/productContext";
 import PageNavigation from "../PageNavigation/PageNavigation";
 import FormatPrice from "../../Helpers/FormatPrice";
+import AddtoCart from "../AddtoCart/AddtoCart";
 
 const API = "https://api-data-e3yn.onrender.com/products";
 
@@ -14,6 +15,7 @@ const SingleProLayout = () => {
   const { id } = useParams();
 
   const {
+    id: prateek,
     smallImg1,
     smallImg2,
     smallImg3,
@@ -95,12 +97,7 @@ const SingleProLayout = () => {
                 <img src={imgSrc} alt="" />
               </div>
               <div className="singlebtnlist">
-                <div className="addbtn">
-                  <button>Add to Cart</button>
-                </div>
-                <div className="addbtn">
-                  <button>Buy Now</button>
-                </div>
+                <AddtoCart items={singleProducts}/>
               </div>
             </div>
           </div>
