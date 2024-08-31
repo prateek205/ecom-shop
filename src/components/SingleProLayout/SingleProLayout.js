@@ -15,7 +15,6 @@ const SingleProLayout = () => {
   const { id } = useParams();
 
   const {
-    id: prateek,
     smallImg1,
     smallImg2,
     smallImg3,

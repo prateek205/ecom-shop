@@ -4,10 +4,9 @@ import Toggle from "../Toggle/Toggle";
 import { useCartContext } from "../../context/cartContext";
 
 const AddtoCart = ({ items }) => {
+  const { id } = items;
 
-   const {AddtoCart} = useCartContext() 
-
-  const { id, price } = items;
+  const { AddtoCart } = useCartContext();
 
   const [quantity, setQuantity] = useState(1);
 
@@ -22,7 +21,7 @@ const AddtoCart = ({ items }) => {
   return (
     <>
       <div className="addbtn">
-        <NavLink to="/cart" onClick={() => AddtoCart(id, price, items)}>
+        <NavLink to="/cart" onClick={() => AddtoCart(id, quantity, items)}>
           <button>Add to Cart</button>
         </NavLink>
       </div>

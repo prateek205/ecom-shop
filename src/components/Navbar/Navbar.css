@@ -57,3 +57,7 @@
 .navbar-list ul li p:hover{
     border: 0.15rem solid #fff;
 }
+
+.count{
+    display: flex;
+}
