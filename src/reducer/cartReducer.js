@@ -1,7 +1,12 @@
+
 const cartReducer = (state, action) => {
+
+
   if (action.type === "ADD_TO_CART") {
     let { id, quantity, items } = action.payload;
     // console.log(items);
+
+    
 
     let existingProduct = state.cart.find((curElem) => {
       return curElem.id === id;

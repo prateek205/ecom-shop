@@ -1,11 +1,15 @@
 import React from "react";
 import "./Navbar.css";
+import { useAuth0 } from "@auth0/auth0-react";
 import { Link, NavLink } from "react-router-dom";
 import { useCartContext } from "../../context/cartContext";
 
 const Navbar = () => {
+  const { user, loginWithRedirect, isAuthenticated, logout } = useAuth0();
 
-  const {total_item} = useCartContext()
+  console.log("current-user", user);
+
+  const { total_item } = useCartContext();
   return (
     <>
       <div className="navbar-section">
@@ -33,17 +37,21 @@ const Navbar = () => {
           </ul>
 
           <ul>
-            <Link to={"/sign-up"}>
-              <li>
-                <p> Sign-Up </p>
-              </li>
-            </Link>
+            <li>
+              {isAuthenticated ? (
+                <p onClick={()=> logout()}>Log Out</p>
+              ) : (
+                <p onClick={() => loginWithRedirect()}> Log In </p>
+              )}
+            </li>
           </ul>
 
           <ul>
             <Link to={"/cart"}>
               <li className="count">
-                <i className="fas fa-shopping-cart"><span>{total_item}</span> </i>
+                <i className="fas fa-shopping-cart">
+                  <span>{total_item}</span>{" "}
+                </i>
               </li>
             </Link>
           </ul>

@@ -24,6 +24,8 @@ const initialState = {
 const CartContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  
+
   const AddtoCart = (id, quantity, items) => {
     dispatch({type:"ADD_TO_CART", payload:{id, quantity, items}})
   }

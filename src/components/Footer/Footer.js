@@ -76,7 +76,7 @@ const Footer = () => {
               <div className="footer_social_list">
                 <i className="fa-brands fa-facebook"></i>
                 <i className="fa-brands fa-youtube"></i>
-                <i className="fa-brands fa-twitter"></i>
+                <i className="fa-brands fa-github"></i>
               </div>
             </div>
           </div>
