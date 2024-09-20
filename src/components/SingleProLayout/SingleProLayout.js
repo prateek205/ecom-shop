@@ -6,7 +6,7 @@ import PageNavigation from "../PageNavigation/PageNavigation";
 import FormatPrice from "../../Helpers/FormatPrice";
 import AddtoCart from "../AddtoCart/AddtoCart";
 
-const API = "https://apidata-production-3c6f.up.railway.app/products";
+const API = "https://api-data-e3yn.onrender.com/products";
 
 
 

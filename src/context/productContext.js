@@ -4,7 +4,7 @@ import reducer from "../reducer/productReducer";
 
 const AppContext = createContext();
 
-const API ="https://apidata-production-3c6f.up.railway.app/products"
+const API ="https://api-data-e3yn.onrender.com/products"
 
 const initialState = {
   isLoading: false,
