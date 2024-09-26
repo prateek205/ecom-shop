@@ -5,6 +5,7 @@ const CartContext = createContext();
 
 const getLocalCartData = () => {
   let newCartItem = localStorage.getItem("PrateekCart")
+// eslint-disable-next-line
   if (newCartItem == []){
     return []
   }else {
