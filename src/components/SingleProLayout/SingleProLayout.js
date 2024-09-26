@@ -5,7 +5,7 @@ import { useProductContext } from "../../context/productContext";
 import PageNavigation from "../PageNavigation/PageNavigation";
 import FormatPrice from "../../Helpers/FormatPrice";
 import AddtoCart from "../AddtoCart/AddtoCart";
-
+ 
 const API = "https://api-data-e3yn.onrender.com/products";
 
 

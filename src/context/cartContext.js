@@ -5,8 +5,7 @@ const CartContext = createContext();
 
 const getLocalCartData = () => {
   let newCartItem = localStorage.getItem("PrateekCart")
-  // eslint-disable-next-line
-  if (newCartItem==[]){
+  if (newCartItem == []){
     return []
   }else {
     return JSON.parse(newCartItem)
@@ -25,7 +24,6 @@ const CartContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   
-
   const AddtoCart = (id, quantity, items) => {
     dispatch({type:"ADD_TO_CART", payload:{id, quantity, items}})
   }
@@ -47,9 +45,8 @@ const CartContextProvider = ({ children }) => {
   }
 
   useEffect(()=>{
-    // dispatch({type:"UPDATE_CART_VALUE"})
-    // dispatch({type:"TOTAL_PRICE"})
-    dispatch({type:"CART_ITEM_PRICE_TOTAL"})
+    dispatch({type:"UPDATE_CART_VALUE"})
+    dispatch({type:"TOTAL_PRICE"})
     localStorage.setItem("PrateekCart", JSON.stringify(state.cart))
   },[state.cart])
 
