@@ -5,12 +5,21 @@ import { useProductContext } from "../../context/productContext";
 import PageNavigation from "../PageNavigation/PageNavigation";
 import FormatPrice from "../../Helpers/FormatPrice";
 import AddtoCart from "../AddtoCart/AddtoCart";
- 
+import { useAuth0 } from "@auth0/auth0-react";
+
+
 const API = "https://api-data-e3yn.onrender.com/products";
 
 
 
 const SingleProLayout = () => {
+
+  const {loginWithRedirect, isAuthenticated} = useAuth0()
+  
+  if(!isAuthenticated){
+    loginWithRedirect()
+  }
+  
   const { getSingleProduct, isSingleLoading, singleProducts } =
     useProductContext();
 

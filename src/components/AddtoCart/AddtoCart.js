@@ -2,12 +2,9 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Toggle from "../Toggle/Toggle";
 import { useCartContext } from "../../context/cartContext";
-import { useAuth0 } from "@auth0/auth0-react";
 
 const AddtoCart = ({ items }) => {
   const { id } = items;
-
-  const {loginWithRedirect, isAuthenticated} = useAuth0()
   
   const { AddtoCart } = useCartContext();
 
@@ -21,9 +18,7 @@ const AddtoCart = ({ items }) => {
     quantity < 10 ? setQuantity(quantity + 1) : setQuantity(10);
   };
 
-  if(!isAuthenticated){
-    loginWithRedirect()
-  }
+
 
   return (
     <>

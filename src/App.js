@@ -11,6 +11,7 @@ import Footer from "./components/Footer/Footer";
 import SingleProduct from "./Pages/SingleProduct";
 
 function App() {
+  
   return (
     <>
       <Router>
