@@ -64,9 +64,7 @@ export const FilterContextProvider = ({ children }) => {
   }, [products]);
 
   return (
-    <FilteredContext.Provider
-      value={{ ...state, setGridView, setListView, sorting, updateFilterValue, clearFilter }}
-    >
+    <FilteredContext.Provider value={{ ...state, setGridView, setListView, sorting, updateFilterValue, clearFilter }}>
       {children}
     </FilteredContext.Provider>
   );
