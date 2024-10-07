@@ -49,7 +49,7 @@ const Navbar = () => {
           <ul>
             <Link to={"/cart"}>
               <li className="count">
-                <i className="fas fa-shopping-cart">
+                <i className="fas fa-shopping-cart cart">
                   <span>{total_item}</span>{" "}
                 </i>
               </li>
